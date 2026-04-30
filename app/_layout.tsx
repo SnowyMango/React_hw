@@ -9,17 +9,16 @@ export default function Layout() {
         <Text style={styles.headerText}>my head</Text>
       </View>
       <Slot />
-      
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { 
+  container: {
     flex: 1,
     backgroundColor: '#6753b2',
-   },
-   
+  },
+
   header: {
     backgroundColor: '#250d7a',
     paddingTop: 50,
