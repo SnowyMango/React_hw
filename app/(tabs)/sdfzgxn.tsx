@@ -5,6 +5,8 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text> bjorn meksi</Text>
+      <Text> Eralb cuni</Text>
+
     </View>
   )
 }
