@@ -1,25 +1,19 @@
 import { usePathname, useRouter } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function Home() {
+export default function Profile() {
   const router = useRouter();
   const pathname = usePathname();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Page</Text>
+      <Text style={styles.title}>Profile Page</Text>
       <Text style={styles.url}>URL: {pathname}</Text>
 
       <TouchableOpacity
         style={styles.btn}
-        onPress={() => router.push('/profile')}>
-        <Text style={styles.btnText}>Go to Profile</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={[styles.btn, styles.btnSecondary]}
-        onPress={() => router.push('/about')}>
-        <Text style={styles.btnText}>Go to About</Text>
+        onPress={() => router.push('/')}>
+        <Text style={styles.btnText}>Back to Home</Text>
       </TouchableOpacity>
     </View>
   );
@@ -34,7 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
 
-  title: { 
+  title:{ 
     fontSize: 28, 
     fontWeight: '700',
     paddingHorizontal: 20,
@@ -42,14 +36,14 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
 
-  url:{ 
-    fontSize: 13, 
-    color: '#888', 
-    marginBottom: 8 
-  },
+  url:{
+     fontSize: 13, 
+     color: '#888', 
+     marginBottom: 8 
+    },
 
   btn:{ 
-    backgroundColor: '#574fe9', 
+    backgroundColor: '#4F46E5', 
     paddingHorizontal: 28, 
     paddingVertical: 12, 
     borderRadius: 10, 
@@ -57,11 +51,7 @@ const styles = StyleSheet.create({
     alignItems: 'center' 
   },
 
-  btnSecondary:{ 
-    backgroundColor: '#3d66ae' 
-  },
-
-  btnText: { 
+  btnText:{ 
     color: '#fff', 
     fontWeight: '600', 
     fontSize: 15 
